@@ -4,12 +4,14 @@ import DateTimeInput from './components/DateTimeInput.vue'
 
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <DateTimeInput
-    class="m-2"
-    :min-date="new Date('1950-01-01')"
-    :max-date="new Date()"
-    :start-date="new Date('1950-01-03')"
-  ></DateTimeInput>
+  <div class="flex m-6 justify-center">
+    <DateTimeInput
+      class="m-2"
+      :min-date="new Date('1950-01-01')"
+      :max-date="new Date()"
+      :start-date="new Date()"
+    />
+  </div>
 </template>
 
 <style>

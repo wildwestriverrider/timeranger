@@ -1,10 +1,11 @@
 <template>
-  <div class="text-xl font-sans">
+  <div class="text-xl font-sans fixed">
     <input
       type="text"
       name="date_time_input"
       @click="calendar.open = true"
       placeholder="Date"
+      :value="calendar.selectedDate"
     />
     {{ calendar.selectedDate }}
     <transition
@@ -17,7 +18,7 @@
     >
       <div
         id="calendar"
-        class="border calendar"
+        class="border calendar relative"
         v-if="calendar.open"
         v-click-outside="closeCalendar"
       >
